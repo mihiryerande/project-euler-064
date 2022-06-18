@@ -1,34 +1,33 @@
 # Project Euler - Problem 64 - Odd Period Square Roots
 All square roots are periodic when written as continued fractions and can be written in the form:
 
-$\qquad\sqrt{N} = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + \dots}}}$
+$\qquad\sqrt{N} = a_0 + \displaystyle \cfrac{1}{\displaystyle a_1 + \cfrac{1}{\displaystyle a_2 + \cfrac{1}{\displaystyle a_3 + \dots}}}$
 
 For example, let us consider $\sqrt{23}$:
 
-$\qquad\sqrt{23} = 4 + \sqrt{23} - 4 = 4 + \frac{1}{\frac{1}{\sqrt{23}-4}} = 4 + \frac{1}{1+\frac{\sqrt{23}-3}{7}}$
+$\qquad\sqrt{23} = 4 + \sqrt{23} - 4 = 4 + \displaystyle\frac{1}{\displaystyle\frac{1}{\displaystyle \sqrt{23}-4}} = 4 + \displaystyle\frac{1}{\displaystyle 1+\frac{\displaystyle\sqrt{23}-3}{7}}$
 
 If we continue we would get the following expansion:
 
-$\qquad\sqrt{23} = 4 + \frac{1}{1 + \frac{1}{3 + \frac{1}{1 + \frac{1}{8+\dots}}}}$
-
+$\qquad\sqrt{23} = 4 + \displaystyle\cfrac{1}{\displaystyle 1 + \cfrac{1}{\displaystyle 3 + \cfrac{1}{\displaystyle 1 + \cfrac{1}{\displaystyle 8+\dots}}}}$
 
 The process can be summarised as follows:
 
-$\qquad a_0 = 4, \frac{1}{\sqrt{23}-4} = \frac{\sqrt{23}+4}{7} = 1 + \frac{\sqrt{23}-3}{7}$
+$\displaystyle\qquad a_0 = 4, \frac{1}{\sqrt{23}-4} = \frac{\sqrt{23}+4}{7} = 1 + \frac{\sqrt{23}-3}{7}$
 
-$\qquad a_1 = 1, \frac{7}{\sqrt{23}-3} = \frac{7(\sqrt{23}+3)}{14} = 3 + \frac{\sqrt{23}-3}{2}$
+$\displaystyle\qquad a_1 = 1, \frac{7}{\sqrt{23}-3} = \frac{7(\sqrt{23}+3)}{14} = 3 + \frac{\sqrt{23}-3}{2}$
 
-$\qquad a_2 = 3, \frac{2}{\sqrt{23}-3} = \frac{2(\sqrt{23}+3)}{14} = 1 + \frac{\sqrt{23}-4}{7}$
+$\displaystyle\qquad a_2 = 3, \frac{2}{\sqrt{23}-3} = \frac{2(\sqrt{23}+3)}{14} = 1 + \frac{\sqrt{23}-4}{7}$
  
-$\qquad a_3 = 1, \frac{7}{\sqrt{23}-4} = \frac{7(\sqrt{23}+4)}{7} = 8 + \sqrt{23} - 4$
+$\displaystyle\qquad a_3 = 1, \frac{7}{\sqrt{23}-4} = \frac{7(\sqrt{23}+4)}{7} = 8 + \sqrt{23} - 4$
 
-$\qquad a_4 = 8, \frac{1}{\sqrt{23}-4} = \frac {\sqrt{23}+4}{7} = 1 + \frac{\sqrt{23}-3}{7}$
+$\displaystyle\qquad a_4 = 8, \frac{1}{\sqrt{23}-4} = \frac {\sqrt{23}+4}{7} = 1 + \frac{\sqrt{23}-3}{7}$
 
-$\qquad a_5 = 1, \frac{7}{\sqrt{23}-3} = \frac{7 (\sqrt{23}+3)}{14} = 3 + \frac{\sqrt{23}-3}{2}$
+$\displaystyle\qquad a_5 = 1, \frac{7}{\sqrt{23}-3} = \frac{7 (\sqrt{23}+3)}{14} = 3 + \frac{\sqrt{23}-3}{2}$
 
-$\qquad a_6 = 3, \frac{2}{\sqrt{23}-3} = \frac{2(\sqrt{23}+3)}{14} = 1 + \frac{\sqrt{23}-4}{7}$
+$\displaystyle\qquad a_6 = 3, \frac{2}{\sqrt{23}-3} = \frac{2(\sqrt{23}+3)}{14} = 1 + \frac{\sqrt{23}-4}{7}$
 
-$\qquad a_7 = 1, \frac{7}{\sqrt{23}-4} = \frac{7(\sqrt{23}+4)}{7} = 8 + \sqrt{23} - 4$
+$\displaystyle\qquad a_7 = 1, \frac{7}{\sqrt{23}-4} = \frac{7(\sqrt{23}+4)}{7} = 8 + \sqrt{23} - 4$
 
 It can be seen that the sequence is repeating.
 For conciseness, we use the notation $\sqrt{23} = [4;(1,3,1,8)]$, to indicate that the block (1,3,1,8) repeats indefinitely.
