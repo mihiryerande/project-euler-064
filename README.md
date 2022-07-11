@@ -1,4 +1,7 @@
-# Project Euler - Problem 64 - Odd Period Square Roots
+# Project Euler
+
+## Problem 64 - Odd Period Square Roots
+
 All square roots are periodic when written as continued fractions and can be written in the form:
 
 $\qquad\sqrt{N} = a_0 + \displaystyle \cfrac{1}{\displaystyle a_1 + \cfrac{1}{\displaystyle a_2 + \cfrac{1}{\displaystyle a_3 + \dots}}}$
