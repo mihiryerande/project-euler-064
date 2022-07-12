@@ -45,7 +45,7 @@
 from math import floor, sqrt
 
 
-def is_square(n):
+def is_square(n: int) -> bool:
     """
     Returns True iff `n` is a perfect square.
 
@@ -63,7 +63,7 @@ def is_square(n):
     return int(s) == s
 
 
-def continued_fraction_period(n):
+def continued_fraction_period(n: int) -> int:
     """
     Given a non-square number `n`,
       returns the period of the continued-fraction representation of sqrt(n),
@@ -124,7 +124,7 @@ def continued_fraction_period(n):
             pairs[p] = i
 
 
-def main(n):
+def main(n: int) -> int:
     """
     Returns the number of continued-fraction representations
       of irrational square roots (≤ `n`)
